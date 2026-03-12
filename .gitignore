@@ -22,5 +22,5 @@ Thumbs.db
 data/docs.db
 *.db
 
-# Built packages
-dist/
+# Built packages (generated files)
+icons_rc.py
