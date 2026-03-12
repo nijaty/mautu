@@ -68,8 +68,9 @@ class MainWindow(QMainWindow):
         self._file_watcher.directoryChanged.connect(self._on_manual_changed)
 
         # Existing setup
-        self.ui.slide_part.setMaximumWidth(0)
+        self.ui.slide_part.setMaximumWidth(400)
         self.ui.slide_part.setMinimumWidth(0)
+        self.ui.open_close_side_btn.setIcon(QtGui.QIcon(u":/icons/icons/angle-small-left.png"))
 
         self.setWindowFlags(QtCore.Qt.WindowType.FramelessWindowHint)
 
@@ -81,6 +82,7 @@ class MainWindow(QMainWindow):
         self.ui.close_window_button.clicked.connect(lambda: self.close())
 
         self.ui.restore_window_button.clicked.connect(lambda: self.restore_or_maximize_window())
+        self.ui.restore_window_button.setIcon(QtGui.QIcon(u":/icons/icons/window-restore.png"))
 
         self.ui.github_button.clicked.connect(self.open_mautu_github)
 
@@ -93,7 +95,7 @@ class MainWindow(QMainWindow):
         # F5 — manual refresh
         QShortcut(QKeySequence("F5"), self).activated.connect(self.refresh_manuals)
 
-        self.show()
+        self.showMaximized()
 
     def _watch_manuals_dir(self):
         """Register every subdirectory and .md file with the file watcher."""
