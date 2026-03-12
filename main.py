@@ -204,5 +204,8 @@ class MainWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+    app.setApplicationName("mautu")
+    app.setDesktopFileName("mautu")
+    app.setWindowIcon(QtGui.QIcon(u":/icons/icons/logo.png"))
     window = MainWindow()
     sys.exit(app.exec())
