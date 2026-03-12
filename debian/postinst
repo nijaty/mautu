@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+INSTALL_DIR="/usr/share/mautu"
+VENV_DIR="${INSTALL_DIR}/venv"
+
+echo "Setting up MAUTU Python environment..."
+
+# Create a virtual environment and install Python dependencies
+python3 -m venv "${VENV_DIR}"
+"${VENV_DIR}/bin/pip" install --quiet --upgrade pip
+"${VENV_DIR}/bin/pip" install --quiet -r "${INSTALL_DIR}/requirements.txt"
+
+# The database is created automatically in ~/.local/share/mautu/
+# on first launch for each user — no import step needed here.
+
+echo "MAUTU installation complete. Run 'mautu' to start the application."

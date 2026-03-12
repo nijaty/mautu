@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+INSTALL_DIR="/usr/share/mautu"
+
+# Remove the virtual environment before the package files are deleted
+if [ -d "${INSTALL_DIR}/venv" ]; then
+    rm -rf "${INSTALL_DIR}/venv"
+fi

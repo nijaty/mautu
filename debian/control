@@ -1,0 +1,9 @@
+Package: mautu
+Version: 1.0.0
+Architecture: all
+Maintainer: MAUTU Contributors <mautu@example.com>
+Depends: python3 (>= 3.8), python3-pip, python3-venv
+Description: MAUTU - IT Manual Viewer
+ A desktop application for browsing, searching, and managing IT manuals.
+ Manuals are stored in a local SQLite database and organized by category
+ (DevOps, Network, Development). The application is built with PySide6.

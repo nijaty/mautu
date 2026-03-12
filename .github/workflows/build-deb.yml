@@ -1,0 +1,66 @@
+name: Build and Release DEB
+
+# Triggers whenever a commit lands on main (i.e. a PR is merged).
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deb:
+    runs-on: ubuntu-22.04
+
+    steps:
+      # ── 1. Check out source ────────────────────────────────────────────────
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0       # needed for git describe
+
+      # ── 2. Determine version ───────────────────────────────────────────────
+      - name: Set version
+        id: version
+        run: |
+          SHORT_SHA=$(git rev-parse --short HEAD)
+          DATE=$(date +'%Y.%m.%d')
+          VERSION="${DATE}-${SHORT_SHA}"
+          echo "VERSION=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "Version: ${VERSION}"
+
+      # ── 3. Install build tools ─────────────────────────────────────────────
+      - name: Install dpkg-dev and rsync
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y dpkg-dev rsync
+
+      # ── 4. Build .deb ─────────────────────────────────────────────────────
+      - name: Build DEB package
+        run: bash scripts/build_deb.sh "${{ steps.version.outputs.VERSION }}"
+
+      # ── 5. Publish GitHub Release ─────────────────────────────────────────
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: "v${{ steps.version.outputs.VERSION }}"
+          name: "MAUTU v${{ steps.version.outputs.VERSION }}"
+          body: |
+            ## What's new
+
+            ${{ github.event.head_commit.message }}
+
+            **Commit:** ${{ github.sha }}
+
+            ---
+
+            ## Install
+
+            ```bash
+            # Download the .deb from the Assets section below, then:
+            sudo dpkg -i mautu_*.deb
+            sudo apt-get install -f   # install any missing dependencies
+            mautu
+            ```
+
+            No database configuration needed — manuals are stored in a local SQLite file.
+          files: dist/*.deb
+          token: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,32 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/angle-small-left.png</file>
+    <file>icons/front_logo.png</file>
+    <file>icons/ansible_logo.png</file>
+    <file>icons/devops_logo.png</file>
+    <file>icons/network_logo.png</file>
+    <file>icons/cross.png</file>
+    <file>icons/ubuntu_logo.png</file>
+    <file>icons/rhel_logo.png</file>
+    <file>icons/logo.png</file>
+    <file>icons/database_logo.png</file>
+    <file>icons/kubernetes_logo.png</file>
+    <file>icons/frontend_logo.png</file>
+    <file>icons/backend_logo.png</file>
+    <file>icons/docker_logo.png</file>
+    <file>icons/github_logo.png</file>
+    <file>icons/github_url.png</file>
+    <file>icons/linux_logo.png</file>
+    <file>icons/windows_logo.png</file>
+    <file>icons/development_logo.png</file>
+    <file>icons/sysadmin_logo.png</file>
+    <file>icons/cybersecurity_logo.png</file>
+    <file>icons/qa_logo.png</file>
+    <file>icons/menu-burger.png</file>
+    <file>icons/search.png</file>
+    <file>icons/terraform_logo.png</file>
+    <file>icons/window-maximize.png</file>
+    <file>icons/window-minimize.png</file>
+    <file>icons/window-restore.png</file>
+  </qresource>
+</RCC>
