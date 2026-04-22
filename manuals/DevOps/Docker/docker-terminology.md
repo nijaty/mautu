@@ -1,0 +1,24 @@
+# Docker Терминология
+- <span style="color: green;"><strong>Container</strong></span>: Изолированная единица выполнения, содержащая приложение и зависимости
+- <span style="color: green;"><strong>Docker Image</strong></span>: Неизменяемый файл, содержащий код, библиотеки и конфигурации, необходимые для запуска приложения.
+- <span style="color: green;"><strong>Dockerfile</strong></span>: Скрипт, описывающий построение образа
+- <span style="color: green;"><strong>Layer</strong></span>: Каждая инструкция Dockerfile создаёт неизменяемый слой (принцип UnionFS).
+- <span style="color: green;"><strong>Network</strong></span>: Виртуальная инфраструктура, соединяющая контейнеры
+- <span style="color: green;"><strong>Volume</strong></span>: Механизм сохранения данных под управлением Docker, независимый от жизненного цикла контейнера и упрощающий резервное копирование/ротацию
+- <span style="color: green;"><strong>Bind Mount</strong></span>: Прямое монтирование директории хоста в контейнер.
+- <span style="color: green;"><strong>Registry</strong></span>: Централизованный репозиторий для хранения и распространения Docker-образов.
+- <span style="color: green;"><strong>Daemon (dockerd)</strong></span>: Системный сервис, управляющий контейнерами, образами, томами и сетями.
+- <span style="color: green;"><strong>Namespace</strong></span>: Функция ядра Linux, обеспечивающая изоляцию ресурсов (PID, NET, MNT и др.).
+- <span style="color: green;"><strong>Cgroup</strong></span>: Механизм Linux для ограничения и мониторинга использования ресурсов (CPU, RAM, I/O). Предотвращает монополизацию ресурсов хоста контейнером.
+- <span style="color: green;"><strong>Overlay Network</strong></span>: Многохостовая виртуальная сеть, используемая в Docker Swarm.
+- <span style="color: green;"><strong>Healthcheck</strong></span>: Периодическая инструкция, проверяющая работоспособность контейнера.
+- <span style="color: green;"><strong>Multi-stage Build</strong></span>: Техника разделения компиляции и выполнения для уменьшения размера образа.
+- <span style="color: green;"><strong>Docker Content Trust</strong></span>: Система криптографической подписи, обеспечивающая целостность образа. Проверяет целостность и подлинность образа.
+- <span style="color: green;"><strong>User Namespace</strong></span>: Изоляция UID/GID между хостом и контейнером для повышения безопасности.
+- <span style="color: green;"><strong>Swarm Mode</strong></span>: Собственный режим оркестрации Docker для управления кластерами контейнеров.
+- <span style="color: green;"><strong>Non-root user</strong></span>: Предотвращает повышение привилегий в случае компрометации.
+- <span style="color: green;"><strong>Security scanning</strong></span>: Обнаруживает уязвимости на ранних этапах (Shift-Left Security).
+- <span style="color: green;"><strong>Private networks (internal:true)</strong></span>: Изолирует внутренние сервисы от внешнего доступа.
+- <span style="color: green;"><strong>Specific tags (v1.2.3)</strong></span>: Обеспечивает воспроизводимость и предотвращает непредсказуемое поведение.
+- <span style="color: green;"><strong>Compose</strong></span>: Инструмент для определения многоконтейнерных приложений
+- <span style="color: green;"><strong>OCI</strong></span>: Open Container Initiative — стандарт контейнеризации
