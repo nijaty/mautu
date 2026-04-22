@@ -1,4 +1,3 @@
-# Kubernetes Терминология
 ### ОСНОВЫ
 <span style="color: green;"><strong>Cluster</strong></span>: Группа связанных компьютеров (узлов), которые запускают приложения.  
 <span style="color: green;"><strong>Node</strong></span>: Отдельный компьютер в кластере, который запускает приложения.  
