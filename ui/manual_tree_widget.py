@@ -11,6 +11,7 @@ _CATEGORY_ICONS = {
     'Docker':  ':/icons/icons/docker_logo.png',
     'DevOps':  ':/icons/icons/devops_logo.png',
     'Ubuntu': ':icons/icons/ubuntu_logo.png',
+    'OpenBao': ':/icons/icons/openbao_logo.png',
     'Windows': ':/icons/icons/windows_logo.png',
     'Backend': ':/icons/icons/backend_logo.png',
     'Network': ':/icons/icons/network_logo.png',
@@ -22,6 +23,7 @@ _CATEGORY_ICONS = {
     'Terraform': ':/icons/icons/terraform_logo.png',
     'Development': ':/icons/icons/development_logo.png',
     'CyberSecurity': ':/icons/icons/cybersecurity_logo.png',
+
 }
 
 class ManualTreeWidget(QTreeWidget):
