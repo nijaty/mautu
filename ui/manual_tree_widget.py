@@ -9,6 +9,7 @@ _CATEGORY_ICONS = {
     'RHEL': ':/icons/icons/rhel_logo.png',
     'Linux': ':/icons/icons/linux_logo.png',
     'React': ':/icons/icons/react_logo.png',
+    'Redis': ':/icons/icons/redis_logo.png',
     'Docker': ':/icons/icons/docker_logo.png',
     'DevOps': ':/icons/icons/devops_logo.png',
     'Ubuntu': ':icons/icons/ubuntu_logo.png',
