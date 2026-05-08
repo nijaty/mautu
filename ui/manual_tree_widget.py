@@ -8,6 +8,7 @@ _CATEGORY_ICONS = {
     'Git': ':/icons/icons/github_logo.png',
     'ELK': ':/icons/icons/elasticsearch_logo.png',
     'RHEL': ':/icons/icons/rhel_logo.png',
+    'Java': ':/icons/icons/java_logo.png',
     'Linux': ':/icons/icons/linux_logo.png',
     'React': ':/icons/icons/react_logo.png',
     'Redis': ':/icons/icons/redis_logo.png',
