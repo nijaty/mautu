@@ -6,6 +6,7 @@ from PySide6.QtGui import QIcon
 _CATEGORY_ICONS = {
     'QA': ':/icons/icons/qa_logo.png',
     'Git': ':/icons/icons/github_logo.png',
+    'ELK': ':/icons/icons/elasticsearch_logo.png',
     'RHEL': ':/icons/icons/rhel_logo.png',
     'Linux': ':/icons/icons/linux_logo.png',
     'React': ':/icons/icons/react_logo.png',
