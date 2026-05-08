@@ -21,6 +21,7 @@ _CATEGORY_ICONS = {
     'Kubernetes': ':/icons/icons/kubernetes_logo.png',
     'Terraform': ':/icons/icons/terraform_logo.png',
     'Development': ':/icons/icons/development_logo.png',
+    'PostgreSQL': ':/icons/icons/postgresql_logo.png',
     'CyberSecurity': ':/icons/icons/cybersecurity_logo.png',
 }
 
