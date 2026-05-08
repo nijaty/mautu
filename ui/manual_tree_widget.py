@@ -8,6 +8,7 @@ _CATEGORY_ICONS = {
     'Git': ':/icons/icons/github_logo.png',
     'RHEL': ':/icons/icons/rhel_logo.png',
     'Linux': ':/icons/icons/linux_logo.png',
+    'React': ':/icons/icons/react_logo.png',
     'Docker': ':/icons/icons/docker_logo.png',
     'DevOps': ':/icons/icons/devops_logo.png',
     'Ubuntu': ':icons/icons/ubuntu_logo.png',
