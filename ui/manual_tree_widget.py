@@ -12,6 +12,7 @@ _CATEGORY_ICONS = {
     'DevOps':  ':/icons/icons/devops_logo.png',
     'Ubuntu': ':icons/icons/ubuntu_logo.png',
     'ArgoCD': ':/icons/icons/argocd_logo.png',
+    'OpenBao': ':/icons/icons/openbao_logo.png',
     'Windows': ':/icons/icons/windows_logo.png',
     'Backend': ':/icons/icons/backend_logo.png',
     'Network': ':/icons/icons/network_logo.png',
