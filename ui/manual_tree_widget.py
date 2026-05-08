@@ -22,11 +22,13 @@ _CATEGORY_ICONS = {
     'Frontend': ':/icons/icons/frontend_logo.png',
     'DataBase': ':/icons/icons/database_logo.png',
     'SysAdmin': ':/icons/icons/sysadmin_logo.png',
-    'Kubernetes': ':/icons/icons/kubernetes_logo.png',
     'Terraform': ':/icons/icons/terraform_logo.png',
-    'Development': ':/icons/icons/development_logo.png',
     'PostgreSQL': ':/icons/icons/postgresql_logo.png',
+    'Prometheus': ':/icons/icons/prometheus_logo.png',
+    'Kubernetes': ':/icons/icons/kubernetes_logo.png',
+    'Development': ':/icons/icons/development_logo.png',
     'CyberSecurity': ':/icons/icons/cybersecurity_logo.png',
+
 }
 
 class ManualTreeWidget(QTreeWidget):
