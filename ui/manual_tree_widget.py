@@ -17,6 +17,7 @@ _CATEGORY_ICONS = {
     'Backend': ':/icons/icons/backend_logo.png',
     'Network': ':/icons/icons/network_logo.png',
     'Ansible': ':/icons/icons/ansible_logo.png',
+    'MariaDB': ':/icons/icons/mariadb_logo.png',
     'Frontend': ':/icons/icons/frontend_logo.png',
     'DataBase': ':/icons/icons/database_logo.png',
     'SysAdmin': ':/icons/icons/sysadmin_logo.png',
