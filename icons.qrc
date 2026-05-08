@@ -30,6 +30,7 @@
     <file>icons/search.png</file>
     <file>icons/grafana_logo.png</file>
     <file>icons/prometheus_logo.png</file>
+    <file>icons/python_logo.png</file>
     <file>icons/terraform_logo.png</file>
     <file>icons/window-maximize.png</file>
     <file>icons/window-minimize.png</file>
