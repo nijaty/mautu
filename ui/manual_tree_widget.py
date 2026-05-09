@@ -4,6 +4,7 @@ from PySide6.QtCore import Signal, Qt
 from PySide6.QtGui import QIcon
 
 _CATEGORY_ICONS = {
+    'AI': ':/icons/icons/ai_logo.png',
     'QA': ':/icons/icons/qa_logo.png',
     'Git': ':/icons/icons/github_logo.png',
     'ELK': ':/icons/icons/elasticsearch_logo.png',
@@ -13,6 +14,7 @@ _CATEGORY_ICONS = {
     'React': ':/icons/icons/react_logo.png',
     'Redis': ':/icons/icons/redis_logo.png',
     'Docker': ':/icons/icons/docker_logo.png',
+    'Claude': ':/icons/icons/claude_logo.png',
     'DevOps': ':/icons/icons/devops_logo.png',
     'Ubuntu': ':icons/icons/ubuntu_logo.png',
     'Python': ':/icons/icons/python_logo.png',
