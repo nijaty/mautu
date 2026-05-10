@@ -30,6 +30,11 @@
     <file>icons/search.png</file>
     <file>icons/claude_logo.png</file>
     <file>icons/ai_logo.png</file>
+    <file>icons/aws_logo.png</file>
+    <file>icons/azure_logo.png</file>
+    <file>icons/yandex_logo.png</file>
+    <file>icons/gcp_logo.png</file>
+    <file>icons/cloud_logo.png</file>
     <file>icons/grafana_logo.png</file>
     <file>icons/prometheus_logo.png</file>
     <file>icons/python_logo.png</file>
