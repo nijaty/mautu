@@ -59,14 +59,23 @@ class DatabaseManager:
 
     @staticmethod
     def _resolve_image_paths(content, base_dir):
-        """Replace relative image paths in markdown with absolute file:// URIs."""
+        """Replace relative image paths in markdown with absolute file:// URIs.
+        Syntax with size: ![alt](path){: width=400 height=300} → <img> tag.
+        """
         def _replace(match):
-            alt, path = match.group(1), match.group(2)
+            alt, path, attrs = match.group(1), match.group(2), match.group(3)
             if path.startswith(('http://', 'https://', 'data:', 'file://')):
-                return match.group(0)
-            abs_path = os.path.abspath(os.path.join(base_dir, path))
-            return f'![{alt}](file://{abs_path})'
-        return re.sub(r'!\[([^\]]*)\]\(([^)]+)\)', _replace, content)
+                abs_uri = path
+            else:
+                abs_uri = 'file://' + os.path.abspath(os.path.join(base_dir, path))
+            if attrs:
+                w = re.search(r'width=(\d+)', attrs)
+                h = re.search(r'height=(\d+)', attrs)
+                w_attr = f' width="{w.group(1)}"' if w else ''
+                h_attr = f' height="{h.group(1)}"' if h else ''
+                return f'<img alt="{alt}" src="{abs_uri}"{w_attr}{h_attr}>'
+            return f'![{alt}]({abs_uri})'
+        return re.sub(r'!\[([^\]]*)\]\(([^)]+)\)(\{:[^}]*\})?', _replace, content)
 
     def sync_from_disk(self, manuals_dir):
         """Wipe all manuals and subcategories, then reimport from manuals_dir."""

@@ -1,13 +1,52 @@
 # Сертификаты AWS
 
-![AWS Foundation](images/aws_foundation.png){width=50%}
 
-![AWS Professional](images/aws_professional.png)
+## ФУНДАМЕНТАЛЬНЫЙ (FOUNDATIONAL)
+Сертификация на основе знаний для базового понимания AWS Cloud. **Предварительный опыт не требуется.**
 
-![AWS Associate](images/aws_associate.png)
+Сертификаты:
 
-![AWS Specialty](images/aws_specialty.png)
+- Cloud Practitioner — Фундаментальный
+- AI Practitioner — Фундаментальный
 
+<div>![AWS Foundation](images/aws_foundation.png){: width=350 height=200}</div>
 
-<img src="./images/aws_specialty.png" width="400">
+<br>
 
+## СПЕЦИАЛИСТ (ASSOCIATE)
+Ролевые сертификаты, демонстрирующие знания и навыки работы с AWS и укрепляющие вашу репутацию как профессионала AWS Cloud. **Рекомендуется предварительный опыт работы с облачными технологиями и/или серьёзный опыт работы с локальной IT-инфраструктурой.**
+
+Сертификаты:
+
+- CloudOps Engineer — Специалист
+- Developer — Специалист
+- Data Engineer — Специалист
+- Solutions Architect — Специалист
+- Machine Learning Engineer — Специалист
+
+<div>![AWS Associate](images/aws_associate.png){: width=350 height=210}</div>
+
+<br>
+
+## ПРОФЕССИОНАЛЬНЫЙ (PROFESSIONAL)
+Ролевые сертификаты, подтверждающие продвинутые навыки и знания, необходимые для проектирования безопасных, оптимизированных и современных приложений, а также для автоматизации процессов на AWS. **Рекомендуется 2 года предварительного опыта работы с AWS Cloud.**
+
+Сертификаты:
+
+- Generative AI Developer — Профессиональный
+- Solutions Architect — Профессиональный
+- DevOps Engineer — Профессиональный
+
+<div>![AWS Professional](images/aws_professional.png){: width=350 height=130}</div>
+
+<br>
+
+## СПЕЦИАЛИЗАЦИЯ (SPECIALTY)
+Углубите знания и станьте доверенным советником для ваших заинтересованных сторон и/или клиентов в этих стратегических областях. **Рекомендуемый опыт указан в руководствах по экзаменам на страницах соответствующих экзаменов.**
+
+Сертификаты:
+
+- Advanced Networking — Специализация
+- Security — Специализация
+
+<div>![AWS Specialty](images/aws_specialty.png){: width=350 height=200}</div>

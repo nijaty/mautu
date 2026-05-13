@@ -121,7 +121,7 @@ class ManualViewer(QWidget):
             content = manual_data[2]
             category = manual_data[3]
 
-            body = md.markdown(content, extensions=['fenced_code', 'tables'])
+            body = md.markdown(content, extensions=['fenced_code', 'tables', 'attr_list'])
             body = _highlight_code_blocks(body)
             html = f"""
             <h1>{title}</h1>
