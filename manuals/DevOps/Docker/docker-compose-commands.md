@@ -1,0 +1,16 @@
+# Docker Compose Команды
+- <span style="color: green;"><strong>docker compose version</strong></span>: Показать версию Docker Compose
+- <span style="color: green;"><strong>docker compose up</strong></span>: Собрать, (пере)создать, запустить и подключиться к контейнерам
+- <span style="color: green;"><strong>docker compose compose up -d</strong></span>: Запустить контейнеры в фоновом режиме
+- <span style="color: green;"><strong>docker compose down</strong></span>: Остановить и удалить контейнеры, сети, тома
+- <span style="color: green;"><strong>docker compose ps</strong></span>: Список всех запущенных контейнеров
+- <span style="color: green;"><strong>docker compose logs</strong></span>: Просмотр вывода из контейнеров
+- <span style="color: green;"><strong>docker compose logs -f</strong></span>: Следить за выводом логов в реальном времени
+- <span style="color: green;"><strong>docker compose build</strong></span>: Собрать или пересобрать сервисы
+- <span style="color: green;"><strong>docker compose pull</strong></span>: Загрузить образы сервисов
+- <span style="color: green;"><strong>docker compose exec 'service' 'cmd'</strong></span>: Выполнить команду в запущенном контейнере
+- <span style="color: green;"><strong>docker compose restart</strong></span>: Перезапустить все сервисы
+- <span style="color: green;"><strong>docker compose start</strong></span>: Запустить существующие контейнеры
+- <span style="color: green;"><strong>docker compose stop</strong></span>: Остановить запущенные контейнеры
+- <span style="color: green;"><strong>docker compose rm</strong></span>: Удалить остановленные контейнеры
+- <span style="color: green;"><strong>docker compose config</strong></span>: Проверить и просмотреть файл Compose
