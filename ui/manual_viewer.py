@@ -99,14 +99,7 @@ class ManualViewer(QWidget):
         # Content viewer
         self.text_browser = QTextBrowser()
         self.text_browser.setOpenExternalLinks(True)
-        self.text_browser.setStyleSheet(f"""
-            QTextBrowser {{
-                background-color: rgb(222, 221, 218);
-                border-radius: 20px;
-                padding: 20px;
-                font-size: {self.font_size}px;
-            }}
-        """)
+        self.update_font_size()
         layout.addWidget(self.text_browser)
 
     def set_content(self, manual_data):
@@ -147,6 +140,7 @@ class ManualViewer(QWidget):
         self.text_browser.setStyleSheet(f"""
             QTextBrowser {{
                 background-color: rgb(222, 221, 218);
+                color: black;
                 border-radius: 20px;
                 padding: 20px;
                 font-size: {self.font_size}px;
