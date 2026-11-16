@@ -11,6 +11,7 @@ from database.db_manager import DatabaseManager
 from ui.manual_viewer import ManualViewer
 from ui.manual_editor_dialog import ManualEditorDialog
 from ui.manual_tree_widget import ManualTreeWidget
+from ui.search_results_widget import SearchResultsWidget
 
 
 class MainWindow(QMainWindow):
@@ -33,6 +34,11 @@ class MainWindow(QMainWindow):
         # Replace textEdit with stacked widget containing manual viewer
         self.content_stack = QStackedWidget()
         self.content_stack.addWidget(self.manual_viewer)
+
+        # Search results page (lists every manual matching the query)
+        self.search_results = SearchResultsWidget(self)
+        self.content_stack.addWidget(self.search_results)
+        self.search_results.manual_selected.connect(self.display_manual)
 
         # Replace textEdit in layout
         old_textedit = self.ui.textEdit
@@ -191,8 +197,8 @@ class MainWindow(QMainWindow):
         if query:
             results = self.db_manager.search_manuals(query)
             if results:
-                # Display first result
-                self.display_manual(results[0][0])
+                self.search_results.set_results(query, results)
+                self.content_stack.setCurrentWidget(self.search_results)
             else:
                 QMessageBox.information(self, "Search Results",
                     f"No manuals found matching '{query}'")

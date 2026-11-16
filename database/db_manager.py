@@ -174,20 +174,19 @@ class DatabaseManager:
         """Search manuals by title and content using LIKE.
 
         Returns:
-            List of Row: (id, title, category_name, snippet)
+            List of Row: (id, title, category_name, content)
         """
         pattern = f'%{query}%'
         with self.get_connection() as conn:
             return conn.execute("""
                 SELECT m.id, m.title, c.name AS category_name,
-                       substr(m.content, 1, 200) AS snippet
+                       m.content
                 FROM manuals m
                 JOIN categories c ON m.category_id = c.id
                 WHERE m.title LIKE ? OR m.content LIKE ?
                 ORDER BY
                     CASE WHEN m.title LIKE ? THEN 0 ELSE 1 END,
                     m.title
-                LIMIT 50
             """, (pattern, pattern, pattern)).fetchall()
 
     def save_manual(self, title, category_id, content, manual_id=None):
